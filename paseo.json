@@ -1,0 +1,16 @@
+{
+  "worktree": {
+    "setup": [
+      "dotnet restore openclaw-windows-node.slnx"
+    ],
+    "teardown": "echo \"Setup starts no persistent services; Paseo handles worktree removal.\""
+  },
+  "scripts": {
+    "diff-check": {
+      "command": "git diff --check"
+    },
+    "build": {
+      "command": "dotnet build openclaw-windows-node.slnx --no-restore"
+    }
+  }
+}
